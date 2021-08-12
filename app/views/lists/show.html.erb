@@ -6,13 +6,15 @@
 </div>
 <div class="container">
   <div class="card-group">
-  <% @list.bookmarks.each do |bookmark| %>
-      <div class="card m-3">
-        <%= image_tag "#{bookmark.movie.poster_url}", alt: "poster", class: "card-img-top" %>
-        <div class="card-body border">
-          <h5 class="card-title"><%= bookmark.movie.title %> - <%= bookmark.movie.rating %> <i class="fas fa-star" style="color: #FEE119"></i></h5>
-          <p class="card-text"><%= bookmark.movie.overview %></p>
-          <div class="card-footer d-flex justify-content-between bottom">
+    <% @list.bookmarks.each do |bookmark| %>
+      <div class="col-4">
+        <div class="card my-4">
+          <%= image_tag "#{bookmark.movie.poster_url}", alt: "poster", class: "card-img-top" %>
+          <div class="card-body border">
+            <h5 class="card-title"><%= bookmark.movie.title %> - <%= bookmark.movie.rating %> <i class="fas fa-star" style="color: #FEE119"></i></h5>
+            <p class="card-text"><%= bookmark.movie.overview %></p>
+          </div>
+          <div class="card-footer d-flex justify-content-between">
             <small class="text-muted"><i class="fas fa-quote-left mr-2"></i><%= bookmark.comment %></small>
             <%= link_to "Delete",
                         bookmark_path(bookmark),
@@ -25,8 +27,3 @@
     <% end %>
   </div>
 </div>
-
-
-
-
-      

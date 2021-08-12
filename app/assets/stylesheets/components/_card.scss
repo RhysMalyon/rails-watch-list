@@ -1,50 +1,41 @@
-.card-product {
+.card-list {
+  background-position: center;
   position: relative;
-  overflow: hidden;
-  height: 250px;
-  width: 40%;
-  margin: 2rem;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  margin: 4px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  &:hover {
-    box-shadow: 0 0 16px rgba(0,0,0,0.2);
-  }
-  > img {
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-    padding: 0 ;
-  }
+  background-size: cover;
 }
 
-.card-product-infos {
-  padding: 2rem;
-  > img {
-    width: 30%;
-    height: 100%;
-    object-fit: cover;
-    padding: 0 ;
-  }
-}
-
-.card-link {
+.list-link {
   position: absolute;
   top: 0;
   bottom: 0;
+  left: 0;
   width: 100%;
 }
 
-.card-action {
-  position: absolute;
-  color: rgba(173, 173, 173, 0.8);
-  &:hover {
-    color: rgba(173, 173, 173, 1);
-  }
+.list-details {
+  color: #f7f7f7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 24px;
+  color: #f7f7f7;
+  text-decoration: none;
+  font-size: 28px;
 }
 
-// .card-head {
-//   height: 8rem;
-//   background-size: cover;
-// }
+.movie-count {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px;
+  font-size: 0.5em;
+  border: 1px solid rgba($color: #000000, $alpha: 0.5);
+  border-radius: 8px;
+  background-color: rgba($color: #ffffff, $alpha: 0.3);
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}

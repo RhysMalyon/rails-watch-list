@@ -1,11 +1,19 @@
-<div class="container d-flex justify-content-center flex-wrap">
+<div class="index-banner">
+  <div class="text-center mt-4">
+    <h1>WATCHLIST</h1>
+  </div>
+</div>
+
+<div class="row justify-content-center mt-4">
   <% @lists.each do |list| %>
-    <div class="card-product">
-      <%= image_tag "http://source.unsplash.com/featured/?movie&#{rand(1000)}" %>
-      <div class="card-product-infos">
-        <h2><%= list.name %></h2>
+    <div class="col-md-12 col-lg-4 col-xl-3">
+      <div class="card-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://source.unsplash.com/featured/?movie">
+        <div class="list-details">
+          <small class="movie-count"><%= list.movies.count %> movies</small>
+          <h2><%= list.name %></h2>
+        </div>
+        <%= link_to '', list_path(list), class: 'list-link' %>
       </div>
-      <%= link_to '', list_path(list), class: 'card-link' %>
     </div>
   <% end %>
 </div>
