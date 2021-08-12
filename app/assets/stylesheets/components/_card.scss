@@ -1,0 +1,50 @@
+.card-product {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  width: 40%;
+  margin: 2rem;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  &:hover {
+    box-shadow: 0 0 16px rgba(0,0,0,0.2);
+  }
+  > img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    padding: 0 ;
+  }
+}
+
+.card-product-infos {
+  padding: 2rem;
+  > img {
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    padding: 0 ;
+  }
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.card-action {
+  position: absolute;
+  color: rgba(173, 173, 173, 0.8);
+  &:hover {
+    color: rgba(173, 173, 173, 1);
+  }
+}
+
+// .card-head {
+//   height: 8rem;
+//   background-size: cover;
+// }

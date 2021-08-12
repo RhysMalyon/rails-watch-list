@@ -1,2 +1,32 @@
-<h1>Lists#show</h1>
-<p>Find me in app/views/lists/show.html.erb</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(http://source.unsplash.com/featured/?movie); height: 40vh">
+  <div class="container text-center">
+    <h1 style="font-size: 4em"><%= @list.name %></h1>
+    <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn btn-secondary mt-3 rounded" %>
+  </div>
+</div>
+<div class="container">
+  <div class="card-group">
+  <% @list.bookmarks.each do |bookmark| %>
+      <div class="card m-3">
+        <%= image_tag "#{bookmark.movie.poster_url}", alt: "poster", class: "card-img-top" %>
+        <div class="card-body border">
+          <h5 class="card-title"><%= bookmark.movie.title %> - <%= bookmark.movie.rating %> <i class="fas fa-star" style="color: #FEE119"></i></h5>
+          <p class="card-text"><%= bookmark.movie.overview %></p>
+          <div class="card-footer d-flex justify-content-between bottom">
+            <small class="text-muted"><i class="fas fa-quote-left mr-2"></i><%= bookmark.comment %></small>
+            <%= link_to "Delete",
+                        bookmark_path(bookmark),
+                        method: :delete,
+                        class: 'card-remove-link', 
+                        data: { confirm: "Remove #{bookmark.movie.title}?"} %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+      

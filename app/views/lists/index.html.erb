@@ -1,2 +1,11 @@
-<h1>Lists#index</h1>
-<p>Find me in app/views/lists/index.html.erb</p>
+<div class="container d-flex justify-content-center flex-wrap">
+  <% @lists.each do |list| %>
+    <div class="card-product">
+      <%= image_tag "http://source.unsplash.com/featured/?movie&#{rand(1000)}" %>
+      <div class="card-product-infos">
+        <h2><%= list.name %></h2>
+      </div>
+      <%= link_to '', list_path(list), class: 'card-link' %>
+    </div>
+  <% end %>
+</div>
