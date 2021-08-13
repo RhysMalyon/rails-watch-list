@@ -7,6 +7,7 @@
     <h1 class="list-title"><%= @list.name %></h1>
   </div>
 </div>
+
 <div class="container text-center">
   <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn btn-secondary mt-3 rounded w-50" %>
   <div class="card-group">
@@ -29,5 +30,12 @@
         </div>
       </div>
     <% end %>
+  </div>
+</div>
+
+<div class="container">
+  <ul class="list-group border p-3 mt-3">
+    <h2 class="text-center">Add a movie</h2>
+    <%= render "bookmarks/form", bookmark: @bookmark %>
   </div>
 </div>
