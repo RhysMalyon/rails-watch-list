@@ -1,6 +1,7 @@
 <div class="index-banner">
-  <div class="text-center mt-4">
+  <div class="text-center mt-4 text-white">
     <h1>WAGONFLIX</h1>
+    <h4 class="mt-4 tagline"><span class="bg-warning p-3 rounded shadow-lg">Never miss a movie</span></h4>
   </div>
 </div>
 
@@ -8,9 +9,9 @@
   <% @lists.each do |list| %>
     <div class="col-md-12 col-lg-4 col-xl-3">
         <% if list.photo.attached? %>
-          <div class="card-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key, height: 300, crop: :fill %>')">
+          <div class="card-list mt-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.photo.key, height: 300, crop: :fill %>')">
         <% else %>
-          <div class="card-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://source.unsplash.com/featured/?movie)">
+          <div class="card-list mt-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(http://source.unsplash.com/featured/?movie)">
         <% end %>
         <div class="list-details">
           <small class="movie-count"><%= list.movies.count %> movies</small>

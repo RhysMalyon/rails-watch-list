@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@900&display=swap');
 
 .banner {
   background-size: cover;
@@ -25,16 +26,28 @@
 .index-banner {
   display: flex;
   height: 40vh;
-  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url('cinema-background.jpg');
+  background-image: linear-gradient(rgba(191, 122, 48, 1) 0%,
+                                    rgba(191, 122, 48, 0.3) 50%,
+                                    rgba(191, 122, 48, 0.15) 65%,
+                                    rgba(191, 122, 48, 0.075) 75.5%,
+                                    rgba(191, 122, 48, 0.037) 82.85%,
+                                    rgba(191, 122, 48, 0.019) 88%,
+                                    rgba(191, 122, 48, 0) 100%),
+                                    asset-url('cinema-background.jpg');
   background-size: cover;
   background-position: 30% 60%;
   align-items: center;
   justify-content: center;
   h1 {
     color: white;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Catamaran', sans-serif;
     text-shadow: 2px 2px 4px rgba(0,0,0,1);
+    font-size: 64px;
   }
+}
+
+.tagline {
+  text-shadow: 2px 2px 8px rgb(71, 45, 17);
 }
 
 .list-title {
@@ -55,3 +68,5 @@
   align-items: center;
   background-size: cover;
 }
+
+

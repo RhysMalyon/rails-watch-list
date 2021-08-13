@@ -1,7 +1,7 @@
 <% if @list.photo.attached? %>
-  <div class="m-0 list-banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key, crop: :fill %>')">
+  <div class="m-0 list-banner" style="background-image: linear-gradient(rgba(191, 122, 48, 1), rgba(0,0,0,0.3)), url('<%= cl_image_path @list.photo.key, crop: :fill %>')">
 <% else %>
-  <div class="m-0 list-banner" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url(http://source.unsplash.com/featured/?movie)">
+  <div class="m-0 list-banner" style="background-image: linear-gradient(rgba(191, 122, 48, 1), rgba(0,0,0,0.7)), url(http://source.unsplash.com/featured/?movie)">
 <% end %>
   <div class="container text-center">
     <h1 class="list-title"><%= @list.name %></h1>
@@ -9,7 +9,7 @@
 </div>
 
 <div class="container text-center">
-  <a href="#bookmark-form"><button class="btn btn-secondary mt-3 rounded w-50">Add a movie</button></a>
+  <a href="#bookmark-form"><button class="btn btn-secondary mt-3 rounded-pill w-25 bg-warning shadow">Add a movie</button></a>
   <div class="card-group">
     <% @list.bookmarks.each do |bookmark| %>
       <div class="col-4 my-4">
